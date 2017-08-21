@@ -4,7 +4,7 @@ import argparse
 import itertools
 import json
 
-BASE_CMD = "./run_hello_world.sh"
+BASE_CMD = "\"./run_hello_world.sh"
 
 parser = argparse.ArgumentParser(description='Create a grid from json')
 parser.add_argument('json', help='Json that contains the grid')
@@ -21,4 +21,4 @@ for p in perms:
     for k in grid.keys():
         argstr += " -" + str(k) + " " + str(p[i])
         i += 1
-    print(BASE_CMD + argstr)
+    print(BASE_CMD + argstr + "\"")
